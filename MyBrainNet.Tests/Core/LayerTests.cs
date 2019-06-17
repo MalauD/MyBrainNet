@@ -41,5 +41,16 @@ namespace MyBrainNet.Core.Tests
             Assert.AreNotEqual(0, layer2.Neurons[0].Value);
             Assert.AreNotEqual(0, layer2.Neurons[1].Value);
         }
+
+        [TestMethod()]
+        public void SetActivationTest()
+        {
+            Layer layer = new Layer(2, 3);
+            Assert.AreEqual(true, layer.Neurons[0].Activation);
+            Assert.AreEqual(true, layer.Neurons[1].Activation);
+            layer.SetActivation(false);
+            Assert.AreEqual(false, layer.Neurons[0].Activation);
+            Assert.AreEqual(false, layer.Neurons[1].Activation);
+        }
     }
 }

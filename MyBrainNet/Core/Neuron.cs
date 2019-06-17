@@ -16,11 +16,14 @@ namespace MyBrainNet.Core
         public double Bias { get; set; }
         public List<NeuronConnection> Connections { get; set; }
 
+        public bool Activation { get; set; }
+
         public Neuron(double InitialBias, List<NeuronConnection> neuronConnections)
         {
             Bias = InitialBias;
             Connections = neuronConnections;
             Inputs = new List<double>();
+            Activation = true;
         }
 
         public Neuron(double bias)
@@ -28,6 +31,18 @@ namespace MyBrainNet.Core
             Bias = bias;
             Inputs = new List<double>();
             Connections = new List<NeuronConnection>();
+            Activation = true;
+        }
+
+        public Neuron(int ConnectionsNumber, bool IsInput)
+        {
+            var rdn = new Random();
+            Bias = rdn.NextDouble();
+            Inputs = new List<double>();
+            Connections = new List<NeuronConnection>();
+            for (int i = 0; i < ConnectionsNumber; i++)
+                Connections.Add(new NeuronConnection(rdn.NextDouble()));
+            Activation = !IsInput;
         }
 
         public Neuron(int ConnectionsNumber)
@@ -38,6 +53,7 @@ namespace MyBrainNet.Core
             Connections = new List<NeuronConnection>();
             for (int i = 0; i < ConnectionsNumber; i++)
                 Connections.Add(new NeuronConnection(rdn.NextDouble()));
+            Activation = true;
         }
 
         public void ProjectConnections(ref Neuron[] ProjectedNeurons)
@@ -53,6 +69,7 @@ namespace MyBrainNet.Core
          => Inputs.Sum() + Bias;
 
         private double GetOutput()
-         => ActivationFunc.Sigmoid(Value);
+         => Activation ? ActivationFunc.Sigmoid(Value) : output;
+
     }
 }

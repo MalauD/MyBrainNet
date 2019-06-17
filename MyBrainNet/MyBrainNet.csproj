@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\BaseLayer.cs" />
     <Compile Include="Core\ILayer.cs" />
+    <Compile Include="Core\InputLayer.cs" />
     <Compile Include="Core\Layer.cs" />
     <Compile Include="Core\NeuralNetwork.cs" />
     <Compile Include="Core\Neuron.cs" />

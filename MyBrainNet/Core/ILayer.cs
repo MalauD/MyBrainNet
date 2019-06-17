@@ -2,7 +2,7 @@
 {
     public interface ILayer
     {
-        Neuron[] Neurons { get; set; }
-
+        void InitNeuron(int NeuronNumber, int ConnectionsCount);
+        void SetActivation(bool Activation);
     }
 }

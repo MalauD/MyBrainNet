@@ -56,6 +56,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Core\InputLayerTests.cs" />
     <Compile Include="Core\LayerTests.cs" />
     <Compile Include="Core\NeuronConnectionTests.cs" />
     <Compile Include="Core\NeuronTests.cs" />
