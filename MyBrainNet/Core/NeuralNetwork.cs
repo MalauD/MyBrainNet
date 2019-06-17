@@ -6,10 +6,11 @@
         public NeuralNetwork(params int[] LayersNeurons)
         {
             Layers = new Layer[LayersNeurons.Length];
-            for(int i = 0; i < Layers.Length - 1; i++)
+            for(int i = 0; i < Layers.Length- 1; i++)
             {
                 Layers[i] = new Layer(LayersNeurons[i], LayersNeurons[i + 1]);
             }
+            Layers[Layers.Length -1] = new Layer(LayersNeurons[LayersNeurons.Length -1], 0);
         }
     }
 }

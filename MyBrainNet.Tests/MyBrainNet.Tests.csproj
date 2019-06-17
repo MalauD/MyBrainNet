@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Core\InputLayerTests.cs" />
     <Compile Include="Core\LayerTests.cs" />
+    <Compile Include="Core\NeuralNetworkTests.cs" />
     <Compile Include="Core\NeuronConnectionTests.cs" />
     <Compile Include="Core\NeuronTests.cs" />
     <Compile Include="Math\ActivationFuncTests.cs" />
