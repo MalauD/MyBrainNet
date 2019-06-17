@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29006.145
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBrainNet", "MyBrainNet\MyBrainNet.csproj", "{E815E1E7-4547-4B27-A3D2-5CE41429FEFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBrainNet.Tests", "MyBrainNet.Tests\MyBrainNet.Tests.csproj", "{646786F2-1DAB-4C2B-BA6D-71D61A6F305B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E815E1E7-4547-4B27-A3D2-5CE41429FEFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E815E1E7-4547-4B27-A3D2-5CE41429FEFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E815E1E7-4547-4B27-A3D2-5CE41429FEFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E815E1E7-4547-4B27-A3D2-5CE41429FEFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{646786F2-1DAB-4C2B-BA6D-71D61A6F305B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{646786F2-1DAB-4C2B-BA6D-71D61A6F305B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{646786F2-1DAB-4C2B-BA6D-71D61A6F305B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{646786F2-1DAB-4C2B-BA6D-71D61A6F305B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F9EE8BF-7A03-4BEB-9518-E7DFC912BEE3}
+	EndGlobalSection
+EndGlobal
