@@ -21,5 +21,15 @@ namespace MyBrainNet.Core.Tests
             Assert.AreEqual(2, nnTest.Layers[1].Neurons.Length);
             Assert.AreEqual(5, nnTest.Layers[2].Neurons.Length);
         }
+
+        [TestMethod()]
+        public void ActivateTest()
+        {
+            NeuralNetwork nn = new NeuralNetwork(2,2, 1);
+
+            Assert.AreNotEqual(new double[] {0d}, nn.Activate(new float[] { 0f, 1f }));
+            Assert.AreNotEqual(new double[] { 1d }, nn.Activate(new float[] { 0f, 1f }));
+            Assert.AreEqual(1, nn.Activate(new float[] { 0f, 1f }).Length);
+        }
     }
 }

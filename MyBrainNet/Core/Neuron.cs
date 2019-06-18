@@ -37,11 +37,12 @@ namespace MyBrainNet.Core
         public Neuron(int ConnectionsNumber, bool IsInput)
         {
             var rdn = new Random();
-            Bias = rdn.NextDouble();
+            //get random between -1 to 1
+            Bias = rdn.NextDouble() * 2 - 1;
             Inputs = new List<double>();
             Connections = new List<NeuronConnection>();
             for (int i = 0; i < ConnectionsNumber; i++)
-                Connections.Add(new NeuronConnection(rdn.NextDouble()));
+                Connections.Add(new NeuronConnection(rdn.NextDouble() * 2 -1));
             Activation = !IsInput;
         }
 

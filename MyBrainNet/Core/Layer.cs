@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Linq;
 
 namespace MyBrainNet.Core
 {
@@ -46,6 +46,16 @@ namespace MyBrainNet.Core
             {
                 neurons[i].Activation = Activation;
             }
+        }
+
+        public ref Neuron[] GetNeurons()
+        {
+            return ref neurons;
+        }
+
+        public double[] GetOutputs()
+        {
+            return (from Neuron n in neurons select n.Output).ToArray();
         }
     }
 }
