@@ -16,8 +16,10 @@ namespace MyBrainNet.Core.Tests
         {
             Neuron testNeuron = new Neuron(0.5D);
             NeuronConnection testConnection = new NeuronConnection(0.2D);
-            testConnection.Project(ref testNeuron, 0.4D);
+            var gid = Guid.NewGuid();
+            testConnection.Project(gid,ref testNeuron, 0.4D);
             Assert.AreEqual(0.58D, testNeuron.Value, 0.1);
+            Assert.AreEqual(gid, testNeuron.InputsIDs.First());
         }
 
         [TestMethod()]

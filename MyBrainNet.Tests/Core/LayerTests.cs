@@ -52,5 +52,13 @@ namespace MyBrainNet.Core.Tests
             Assert.AreEqual(false, layer.Neurons[0].Activation);
             Assert.AreEqual(false, layer.Neurons[1].Activation);
         }
+
+        [TestMethod()]
+        public void GetNeuronByIDTest()
+        {
+            Layer layer = new Layer(2, 3);
+            var u = layer.Neurons[0].id;
+            Assert.AreEqual(layer.Neurons[0], layer.GetNeuronByID(u));
+        }
     }
 }

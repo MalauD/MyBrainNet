@@ -53,9 +53,28 @@ namespace MyBrainNet.Core
             return ref neurons;
         }
 
+        public ref Neuron GetNeuronByID(Guid guid)
+        {
+            for(int i = 0; i < neurons.Length; i++)
+            {
+                if (neurons[i].id == guid)
+                    return ref neurons[i];
+            }
+            throw new Exception("Invalid ID");
+        }
+
+
         public double[] GetOutputs()
         {
             return (from Neuron n in neurons select n.Output).ToArray();
+        }
+
+        public void ResetNeuronsConnection()
+        {
+            for (int i = 0; i < neurons.Length; i++)
+            {
+                neurons[i].ResetConnections();
+            }
         }
     }
 }
